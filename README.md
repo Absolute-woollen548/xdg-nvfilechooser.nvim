@@ -1,3 +1,6 @@
+
+
+
 # :penguin: `XDG-NVFilechooser.nvim`
 
 A Linux XDG-portal filepicker backend and Neovim plugin to pick any file using `snacks.picker` (for now)
@@ -16,6 +19,8 @@ If I'm uploading a file, I'm almost certain of its name and have an idea of wher
 > With that said, I welcome contributaion.
 
 A video tells a thousand words:
+
+https://github.com/user-attachments/assets/b40088fd-122e-4fdb-99f7-8c724dc5db23
 
 ## Requirements
 
