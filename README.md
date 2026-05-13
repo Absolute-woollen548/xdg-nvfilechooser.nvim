@@ -1,6 +1,3 @@
-
-
-
 # :penguin: `XDG-NVFilechooser.nvim`
 
 A Linux XDG-portal filepicker backend and Neovim plugin to pick any file using `snacks.picker` (for now)
@@ -154,15 +151,20 @@ systemctl --user restart xdg-desktop-portal
 ## Plugin Installation
 
 ```lua
-{
-    "shenawy29/xdg-nvfilechooser.nvim",
-	lazy = false,
+return {
+	"shenawy29/xdg-nvfilechooser.nvim",
 	dependencies = {
 		"folke/snacks.nvim",
 	},
 	config = function()
-        -- only snacks is supported for now
-		require("xdg-nvfilechooser").setup({ picker = "snacks" })
+		require("xdg-nvfilechooser").setup({
+			picker = "snacks",
+
+			-- Already set by default. Goto_path for the rare case when you want to pick a file in the outside of $HOME.
+			keymaps = {
+				["<C-e>"] = { "goto_path", mode = { "n", "i" } },
+			},
+		})
 	end,
 }
 ```
